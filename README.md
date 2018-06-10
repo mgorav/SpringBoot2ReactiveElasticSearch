@@ -33,3 +33,5 @@ curl -X PUT "http://localhost:8080/users" -H "accept: */*" -H "Content-Type: app
    curl -X GET "http://localhost:8080/users/mgorav1" -H "accept: */*"
 ```
 
+
+Elastic Search is an integral part of Data Lake as an example, MapR (https://mapr.com/apps/elasticsearch-apache-hadoop/), this project also demonstrates an easy programming model for Java developer to interact with Elastic Search asynchronous (reactively), thanks to Spring WebFlux
