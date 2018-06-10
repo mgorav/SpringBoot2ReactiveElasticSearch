@@ -12,7 +12,12 @@ This project demonstrates:
 7. Source-Sink programing model
 8...
 
+Elastic Search is an integral part of Data Lake such as build using [MapR](https://mapr.com/apps/elasticsearch-apache-hadoop/); this project also demonstrates an easy programming model for Java developer to interact with Elastic Search asynchronous (reactively), thanks to Spring WebFlux
+
+
 NOTE: The Elastic Search interaction is made reactive using elasticsearch-rest-high-level-client
+
+NOTE: Reactive Swagger UI is *not available* so far
 
 ### Pre-requisite
 Run Elastic search as Docker image shown below:
@@ -34,4 +39,3 @@ curl -X PUT "http://localhost:8080/users" -H "accept: */*" -H "Content-Type: app
 ```
 
 
-Elastic Search is an integral part of Data Lake such as build using [MapR](https://mapr.com/apps/elasticsearch-apache-hadoop/); this project also demonstrates an easy programming model for Java developer to interact with Elastic Search asynchronous (reactively), thanks to Spring WebFlux
