@@ -4,7 +4,7 @@ The beautiful world of non-blocking APIs using Spring Boot 2.0.2 & Elastic Searc
 
 This project demonstrates:
 1. Building reactive APIs (PUB-SUB model) like search, put ..
-2. Integration with Elastic Search 
+2. Reactive integration with Elastic Search 
 3. Spring Boot direct integration with Elastic Search without Spring Data to unearth the power of Elastic Search
 4. Elastic search core API based indexing
 5. Lazy APIs — meaning computation will start only after subscribing
