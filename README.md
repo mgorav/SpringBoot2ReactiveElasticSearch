@@ -11,6 +11,8 @@ This project demonstrates:
 6. Exception are first little citizen (ActionListener<IndexResponse>)
 7. .....
 
+NOTE: The Elastic Search interaction is made reactive using elasticsearch-rest-high-level-client
+
 ### Pre-requisite
 Run Elastic search as Docker image shown below:
 ```bash
