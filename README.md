@@ -1,10 +1,15 @@
 # Non blocking/reactive APIs using Spring Boot 2.0.2 Reactive + Elastic Search
 
+The beautiful world of non-blocking APIs using Spring Boot 2.0.2 & Elastic Search demonstrated in my project "SpringBoot2ReactiveElasticSearch".  This application with start with "Netty" in place of traditional "Tomcat": "Netty started on port(s): 8080"
 
 This project demonstrates:
-1. Spring Boo 2.0.2 reactive problem model
-2. Elastic search interaction along with async indexing
 
+1. Building reactive APIs (PUB-SUB model) like search, put ..
+2. Integration with Elastic Search 
+3. Spring Boot direct integration with Elastic Search without Spring Data to unearth the power of Elastic Search
+4. Elastic search auto-indexing
+5. Lazy APIs — meaning computation will only start only after subscribing 
+6. .....
 
 ### Pre-requisite
 Run Elastic search as Docker image shown below:
