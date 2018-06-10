@@ -9,7 +9,8 @@ This project demonstrates:
 4. Elastic search auto-indexing
 5. Lazy APIs — meaning computation will only start only after subscribing 
 6. Exception are first little citizen (ActionListener<IndexResponse>)
-7. .....
+7. Source-Sink programing model
+8...
 
 NOTE: The Elastic Search interaction is made reactive using elasticsearch-rest-high-level-client
 
