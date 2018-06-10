@@ -35,7 +35,7 @@ public class ElasticSearchService {
     private final Counter esSuccesses = Metrics.counter("es.index", "result", "success");
     private final Counter esFailures = Metrics.counter("es.index", "result", "failure");
 
-    public Mono<User> findByUserName(String userName) {
+    public Mono<User> searchByUserName(String userName) {
         return Mono
                 .<GetResponse>create(sink ->
                         restHighLevelClient.getAsync(new GetRequest("user", "user", userName), listenerToTheSink(sink))

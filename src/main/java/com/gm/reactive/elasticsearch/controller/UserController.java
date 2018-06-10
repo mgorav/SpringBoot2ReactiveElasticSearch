@@ -33,7 +33,7 @@ public class UserController {
     @GetMapping("/{userName}")
     public Mono<ResponseEntity<User>> get(@PathVariable("userName") String userName) {
         return elasticSearchService
-                .findByUserName(userName)
+                .searchByUserName(userName)
                 .map(ResponseEntity::ok)
                 .switchIfEmpty(NOT_FOUND);
     }
