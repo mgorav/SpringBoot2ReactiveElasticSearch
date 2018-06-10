@@ -8,7 +8,7 @@ This project demonstrates:
 3. Spring Boot direct integration with Elastic Search without Spring Data to unearth the power of Elastic Search
 4. Elastic search core API based indexing
 5. Lazy APIs — meaning computation will start only after subscribing
-6. Exception are first little citizen (ActionListener<IndexResponse>)
+6. Exception(s) is/are first little citizen (ActionListener<IndexResponse>)
 7. Source-Sink programing model
 8...
 
