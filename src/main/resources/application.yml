@@ -1,0 +1,39 @@
+logging.level:
+  com.gm.reactive.elasticsearch: TRACE
+
+elasticsearch:
+  hosts:
+    - http://localhost:9200
+  connectTimeout: 10000
+  connectionRequestTimeout: 10000
+  socketTimeout: 10000
+  maxRetryTimeoutMillis: 60000
+
+#management.metrics.enable.jvm=false
+#management.metrics.distribution.percentiles-histogram.http.server.requests=true
+#management.metrics.distribution.sla.http.server.requests=1ms,5ms
+
+
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: *
+#  metrics:
+#    export:
+#      graphite:
+#        host: localhost
+#        port: 3000
+#        protocol: plaintext
+#        step: PT1S
+#    binders:
+#      jvm:
+#        enabled: true
+#        root: true
+#    distribution:
+#      percentiles-histogram:
+#        http.server.requests: true
+#      sla:
+#        http.server.requests: 1ms,5ms
+#    server:
+#      port: 8081
