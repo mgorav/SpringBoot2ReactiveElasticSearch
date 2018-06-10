@@ -30,10 +30,6 @@ public class ElasticSearchService {
     private final RestHighLevelClient restHighLevelClient;
     private final ObjectMapper objectMapper;
 
-    private final Timer esIndexTimer = Metrics.timer("es.timer");
-    private final LongAdder esConcurrent = Metrics.gauge("es.esConcurrent", new LongAdder());
-    private final Counter esSuccesses = Metrics.counter("es.index", "result", "success");
-    private final Counter esFailures = Metrics.counter("es.index", "result", "failure");
 
     public Mono<User> searchByUserName(String userName) {
         return Mono
@@ -47,33 +43,13 @@ public class ElasticSearchService {
 
     public Mono<IndexResponse> index(User doc) {
         return indexDocument(doc)
-                .compose(this::countSuccessAndFailure)
-                .compose(this::countEsConcurrent)
-                .compose(this::measureEsTime)
                 .doOnError(e -> log.error("Unable to index {}", doc, e));
     }
 
     // Utility methods
-    private Mono<IndexResponse> countEsConcurrent(Mono<IndexResponse> monoIndexResponse) {
-        return monoIndexResponse
-                .doOnSubscribe(s -> esConcurrent.increment())
-                .doOnTerminate(esConcurrent::decrement);
-    }
 
-    private Mono<IndexResponse> measureEsTime(Mono<IndexResponse> monoIndexResponse) {
-        return Mono
-                .fromCallable(System::currentTimeMillis)
-                .flatMap(time ->
-                        monoIndexResponse.doOnSuccess(response ->
-                                esIndexTimer.record(System.currentTimeMillis() - time, TimeUnit.MILLISECONDS))
-                );
-    }
 
-    private Mono<IndexResponse> countSuccessAndFailure(Mono<IndexResponse> mono) {
-        return mono
-                .doOnError(e -> esFailures.increment())
-                .doOnSuccess(response -> esSuccesses.increment());
-    }
+
 
     private Mono<IndexResponse> indexDocument(User userDocument) {
         return Mono.create(aSink -> {
