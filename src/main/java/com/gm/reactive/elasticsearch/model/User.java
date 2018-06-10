@@ -1,11 +1,15 @@
 package com.gm.reactive.elasticsearch.model;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 
 @NoArgsConstructor
 @Data
+@ToString
+@EqualsAndHashCode
 public class User {
 
     private String firstName;
