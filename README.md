@@ -1,4 +1,6 @@
-# Spring Boot 2.0.2 Reactive + Elastic Search
+# Non blocking/reactive APIs using Spring Boot 2.0.2 Reactive + Elastic Search
+
+
 This project demonstrates:
 1. Spring Boo 2.0.2 reactive problem model
 2. Elastic search interaction along with async indexing
