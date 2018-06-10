@@ -1,4 +1,4 @@
-# Non blocking/reactive APIs using Spring Boot 2.0.2 Reactive + Elastic Search
+# Non blocking/reactive APIs using Spring Boot 2.0.2 Reactive + Reactive Elastic Search
 
 The beautiful world of non-blocking APIs using Spring Boot 2.0.2 & Elastic Search demonstrated in my project "SpringBoot2ReactiveElasticSearch".  This application with start with "Netty" in place of traditional "Tomcat": "Netty started on port(s): 8080"
 
